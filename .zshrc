@@ -34,9 +34,8 @@ fi
 
 export PATH="$HOME/.local/bin:$HOME/.cargo/bin:$HOME/.cabal/bin:$HOME/.ghcup/bin:$PATH"
 
-if [ -e /usr/local/go ]; then
-  export PATH="/usr/local/go/bin:$PATH"
-fi
+[ -e /usr/local/go ] && export PATH="/usr/local/go/bin:$PATH"
+[ -e ~/.nimble ] && export PATH="/home/user/.nimble/bin:$PATH"
 
 bindkey \^U backward-kill-line
 
