@@ -1,7 +1,3 @@
-# Config
-ZSH_PROMPT_REMOTE=true
-
-# Implementation
 bindkey -e
 
 autoload -Uz compinit
@@ -32,7 +28,7 @@ command -v xdg-open >/dev/null && alias open=xdg-open
 export PS1='%F{yellow}%~%f %(!.%F{red}#.%F{green}%%)%f '
 export RPS1=""
 
-if [ "$ZSH_PROMPT_REMOTE" = true ]; then
+if [ -e ~/.zshrc_is_remote ]; then
   export PS1="%F{white}$(hostname)%f $PS1"
 fi  
 
