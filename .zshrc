@@ -25,6 +25,8 @@ command -v helix >/dev/null && ! command -v hx >/dev/null && alias hx=helix
 command -v batcat >/dev/null && alias bat=batcat
 command -v xdg-open >/dev/null && alias open=xdg-open
 
+alias person=man
+
 function lolman() {
   man "$@" | lolcat -f | less -R
 }
