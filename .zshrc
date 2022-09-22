@@ -21,7 +21,7 @@ setopt HIST_IGNORE_SPACE
 setopt HIST_IGNORE_ALL_DUPS
 
 command -v exa >/dev/null && alias ls=exa
-command -v helix >/dev/null && alias hx=helix
+command -v helix >/dev/null && ! command -v hx >/dev/null && alias hx=helix
 command -v batcat >/dev/null && alias bat=batcat
 command -v xdg-open >/dev/null && alias open=xdg-open
 
