@@ -25,6 +25,10 @@ command -v helix >/dev/null && ! command -v hx >/dev/null && alias hx=helix
 command -v batcat >/dev/null && alias bat=batcat
 command -v xdg-open >/dev/null && alias open=xdg-open
 
+function lolman() {
+  man "$@" | lolcat -f | less -R
+}
+
 export PS1='%F{yellow}%~%f %(!.%F{red}#.%F{green}%%)%f '
 export RPS1=""
 
